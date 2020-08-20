@@ -30,6 +30,7 @@ class GroupSystemMessageNode extends MessageNode {
 
   GroupSystemMessageNode.fromJson(Map<String, dynamic> json)
       : super(MessageNodeType.GroupSystem) {
+    this.userData = json["userData"];
     this.platform = json["platform"];
     this.groupId = json["groupId"];
     this.subtype = GroupSystemTypeTool.intToGroupSystemType(json["subtype"]);
