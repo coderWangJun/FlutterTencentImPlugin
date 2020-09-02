@@ -1053,7 +1053,7 @@ class MessageVoiceState extends State<MessageVoice> {
   // 播放语音
   onPlayerOrStop() async {
     // 如果视频文件为空，就下载视频
-    DialogUtil.showProgressLoading(context);
+    // DialogUtil.showProgressLoading(context);
     this.path = await TencentImPlugin.downloadSound(
       message: widget.data,
       path: path,

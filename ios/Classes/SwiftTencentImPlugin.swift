@@ -1861,13 +1861,26 @@ public class SwiftTencentImPlugin: NSObject, FlutterPlugin, TIMUserStatusListene
         self.invokeListener(type: ListenerType.RecvReceipt, params: rs);
     }
 
-    /**
+        /**
      * 新消息回调通知
      */
     public func onNewMessage(_ msgs: [Any]!) {
         TencentImUtils.getMessageInfo(timMessages: msgs as! [TIMMessage], onSuccess: {
             (array) -> Void in
-            self.invokeListener(type: ListenerType.NewMessages, params: array);
+            
+            if let msg = msgs.first as? TIMMessage , let elm = msg.getElem(0) as? TIMSoundElem{
+              
+                let entity = array.first as? MessageEntity
+                let node   = entity?.elemList?.first as? SoundMessageEntity
+                
+              elm.getUrl { (url) in
+                 node?.path = url;
+                 self.invokeListener(type: ListenerType.NewMessages, params: array);
+              }
+            }else{
+               self.invokeListener(type: ListenerType.NewMessages, params: array);
+            }
+            
         }, onFail: { _, _ in })
     }
 

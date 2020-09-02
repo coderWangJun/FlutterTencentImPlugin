@@ -1,0 +1,105 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_plugin_android_lifecycle (0.0.1):
+    - Flutter
+  - flutter_sound (0.0.1):
+    - Flutter
+  - HandyJSON (5.0.2)
+  - hua_wei_push_plugin (0.0.1):
+    - Flutter
+  - image_picker (0.0.1):
+    - Flutter
+  - libwebp (1.1.0):
+    - libwebp/demux (= 1.1.0)
+    - libwebp/mux (= 1.1.0)
+    - libwebp/webp (= 1.1.0)
+  - libwebp/demux (1.1.0):
+    - libwebp/webp
+  - libwebp/mux (1.1.0):
+    - libwebp/demux
+  - libwebp/webp (1.1.0)
+  - path_provider (0.0.1):
+    - Flutter
+  - permission_handler (4.0.0):
+    - Flutter
+  - tencent_im_plugin (0.0.1):
+    - Flutter
+    - HandyJSON
+    - TXIMSDK_iOS (= 4.6.58)
+  - TXIMSDK_iOS (4.6.58)
+  - video_player (0.0.1):
+    - Flutter
+  - video_player_web (0.0.1):
+    - Flutter
+  - video_thumbnail (0.0.1):
+    - Flutter
+    - libwebp
+  - xiao_mi_push_plugin (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_plugin_android_lifecycle (from `/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/flutter_plugin_android_lifecycle-1.0.6/ios/flutter_plugin_android_lifecycle.podspec`)
+  - flutter_sound (from `/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/flutter_sound-2.1.1/ios/flutter_sound.podspec`)
+  - hua_wei_push_plugin (from `/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/hua_wei_push_plugin-1.0.0/ios/hua_wei_push_plugin.podspec`)
+  - "image_picker (from `/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/image_picker-0.6.3+4/ios/image_picker.podspec`)"
+  - path_provider (from `/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/path_provider-1.4.5/ios/path_provider.podspec`)
+  - permission_handler (from `/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/permission_handler-4.0.0/ios/permission_handler.podspec`)
+  - tencent_im_plugin (from `/Users/tion126/Desktop/FlutterTencentImPlugin/ios/tencent_im_plugin.podspec`)
+  - "video_player (from `/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/video_player-0.10.8+1/ios/video_player.podspec`)"
+  - "video_player_web (from `/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/video_player_web-0.1.2+1/ios/video_player_web.podspec`)"
+  - video_thumbnail (from `/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/video_thumbnail-0.2.1/ios/video_thumbnail.podspec`)
+  - xiao_mi_push_plugin (from `/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/xiao_mi_push_plugin-1.0.0/ios/xiao_mi_push_plugin.podspec`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - HandyJSON
+    - libwebp
+    - TXIMSDK_iOS
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_plugin_android_lifecycle:
+    :path: "/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/flutter_plugin_android_lifecycle-1.0.6/ios/flutter_plugin_android_lifecycle.podspec"
+  flutter_sound:
+    :path: "/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/flutter_sound-2.1.1/ios/flutter_sound.podspec"
+  hua_wei_push_plugin:
+    :path: "/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/hua_wei_push_plugin-1.0.0/ios/hua_wei_push_plugin.podspec"
+  image_picker:
+    :path: "/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/image_picker-0.6.3+4/ios/image_picker.podspec"
+  path_provider:
+    :path: "/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/path_provider-1.4.5/ios/path_provider.podspec"
+  permission_handler:
+    :path: "/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/permission_handler-4.0.0/ios/permission_handler.podspec"
+  tencent_im_plugin:
+    :path: "/Users/tion126/Desktop/FlutterTencentImPlugin/ios/tencent_im_plugin.podspec"
+  video_player:
+    :path: "/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/video_player-0.10.8+1/ios/video_player.podspec"
+  video_player_web:
+    :path: "/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/video_player_web-0.1.2+1/ios/video_player_web.podspec"
+  video_thumbnail:
+    :path: "/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/video_thumbnail-0.2.1/ios/video_thumbnail.podspec"
+  xiao_mi_push_plugin:
+    :path: "/Users/tion126/.pub-cache/hosted/pub.flutter-io.cn/xiao_mi_push_plugin-1.0.0/ios/xiao_mi_push_plugin.podspec"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  flutter_plugin_android_lifecycle: 47de533a02850f070f5696a623995e93eddcdb9b
+  flutter_sound: 0e8163ceac1e00eb6d894e2ae4641ba726a2c479
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  hua_wei_push_plugin: f330ae50d545dfeaf02ba7ef7dabc02ad5fa33b5
+  image_picker: e3eacd46b94694dde7cf2705955cece853aa1a8f
+  libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
+  path_provider: fb74bd0465e96b594bb3b5088ee4a4e7bb1f2a9d
+  permission_handler: 0fb88b8a3c23e31e5de45b8f1bb8b7de28cf8941
+  tencent_im_plugin: a055ed155fd2cae7f006e756dbec96255b4aa0a3
+  TXIMSDK_iOS: d4231ccd8a045f54ca04d008dba46fdbf25687fb
+  video_player: 69c5f029fac4ffe4fc8a85ea7f7b793709661549
+  video_player_web: da8cadb8274ed4f8dbee8d7171b420dedd437ce7
+  video_thumbnail: c4e2a3c539e247d4de13cd545344fd2d26ffafd1
+  xiao_mi_push_plugin: 86abc312e6ec202a72d423ad5b1bf2226a902266
+
+PODFILE CHECKSUM: a34546a206a090bc28b5e6f5b45e4187fb99dba8
+
+COCOAPODS: 1.8.4
