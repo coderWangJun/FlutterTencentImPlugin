@@ -4,13 +4,18 @@ import android.util.Log;
 
 import com.tencent.imsdk.TIMConnListener;
 import com.tencent.imsdk.TIMConversation;
+import com.tencent.imsdk.TIMElem;
+import com.tencent.imsdk.TIMElemType;
 import com.tencent.imsdk.TIMGroupEventListener;
 import com.tencent.imsdk.TIMGroupTipsElem;
 import com.tencent.imsdk.TIMMessage;
 import com.tencent.imsdk.TIMMessageListener;
 import com.tencent.imsdk.TIMRefreshListener;
+import com.tencent.imsdk.TIMSoundElem;
 import com.tencent.imsdk.TIMUploadProgressListener;
 import com.tencent.imsdk.TIMUserStatusListener;
+import com.tencent.imsdk.TIMValueCallBack;
+import com.tencent.imsdk.conversation.ProgressInfo;
 import com.tencent.imsdk.ext.message.TIMMessageLocator;
 import com.tencent.imsdk.ext.message.TIMMessageReceipt;
 import com.tencent.imsdk.ext.message.TIMMessageReceiptListener;
@@ -29,6 +34,7 @@ import top.huic.tencent_im_plugin.entity.MessageEntity;
 import top.huic.tencent_im_plugin.entity.SessionEntity;
 import top.huic.tencent_im_plugin.enums.ListenerTypeEnum;
 import top.huic.tencent_im_plugin.message.entity.GroupTipsMessageEntity;
+import top.huic.tencent_im_plugin.message.entity.SoundMessageEntity;
 import top.huic.tencent_im_plugin.util.JsonUtil;
 import top.huic.tencent_im_plugin.util.TencentImUtils;
 
@@ -181,12 +187,36 @@ public class TencentImListener implements TIMUserStatusListener,
      * @param list 消息列表
      * @return 默认情况下所有消息监听器都将按添加顺序被回调一次，除非用户在 onNewMessages 回调中返回 true，此时将不再继续回调下一个消息监听器
      */
+
+
     @Override
     public boolean onNewMessages(List<TIMMessage> list) {
+        final TIMElem elem = list.get(0).getElement(0);
         TencentImUtils.getMessageInfo(list, new ValueCallBack<List<MessageEntity>>(null) {
             @Override
-            public void onSuccess(List<MessageEntity> messageEntities) {
-                invokeListener(ListenerTypeEnum.NewMessages, messageEntities);
+            public void onSuccess(final List<MessageEntity> messageEntities) {
+
+                if (elem.getType() == TIMElemType.Sound){
+                    final SoundMessageEntity entity = (SoundMessageEntity) messageEntities.get(0).getElemList().get(0);
+
+                    TIMSoundElem sound = (TIMSoundElem) elem;
+                    sound.getUrl(new TIMValueCallBack<String>() {
+                                     @Override
+                                     public void onError(int i, String s) {
+
+                                     }
+
+                                     @Override
+                                     public void onSuccess(String s) {
+                                         entity.setPath(s);
+                                         invokeListener(ListenerTypeEnum.NewMessages, messageEntities);
+                                     }
+                                 }
+                    );
+                }else{
+                    invokeListener(ListenerTypeEnum.NewMessages, messageEntities);
+                }
+
             }
 
             @Override
